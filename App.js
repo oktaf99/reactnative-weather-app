@@ -18,7 +18,7 @@ const App = () => {
         const data = response.data;
         data.visibility /= 1000;
         data.visibility = data.visibility.toFixed(2);
-        data.main.temp -= 273.15; // Konversi Kelvin ke Celcius
+        data.main.temp -= 273.15;
         data.main.temp = data.main.temp.toFixed(2);
         setWeatherData(data);
         setStatus('success')
@@ -49,7 +49,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <WeatherSearch searchWeather={searchWeather} />
-      {weatherData && <WeatherInfo weatherData={weatherData} />}
+      {/* {weatherData && <WeatherInfo weatherData={weatherData} />} */}
       <View style={styles.margintTop20}>{renderComponent()}</View>
     </View>
   );
@@ -58,6 +58,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    paddingTop: 50,
   },
 });
 

@@ -3,7 +3,7 @@ import { View, Button, StyleSheet } from "react-native";
 import CustomTextInput from "./customTextInput";
 
 const weatherSearch = ({ searchWeather }) => {
-  const [weatherData, setWeatherData] = useState();
+  
   const [location, setLocation] = useState("");
   return (
     <View>
